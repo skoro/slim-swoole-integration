@@ -1,0 +1,29 @@
+{
+    "name": "skoro/slim-swoole-integration",
+    "description": "Integration of Slim framework and Swoole - event driven asynchronous library",
+    "keywords": ["slim", "framework", "swoole", "async", "event-driven"],
+    "authors": [
+        {
+            "name": "Oleksii Skorobogatko",
+            "email": "skorobogatko.oleksii@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "ext-swoole": "^4.8",
+        "slim/slim": "^4.9",
+        "leocavalcante/request-callback": "^0.1.1"
+    },
+    "require-dev": {
+        "swoole/ide-helper": "^4.8"
+    },
+    "suggest": {
+        "ext-inotify": "Needed to enable hot code reloading"
+    },
+    "autoload": {
+        "psr-4": {
+            "Slim\\Swoole\\": "src/"
+        }
+    }
+}
