@@ -63,7 +63,7 @@ class InotifyWatcher implements FileWatcher
     }
 
     /**
-     * @return string[]
+     * @return string[] The list of changed files.
      */
     public function readChanges(): array
     {
