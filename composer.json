@@ -5,9 +5,14 @@
     "authors": [
         {
             "name": "Oleksii Skorobogatko",
-            "email": "skorobogatko.oleksii@gmail.com"
+            "email": "skorobogatko.oleksii@gmail.com",
+            "role": "Developer"
         }
     ],
+    "support": {
+        "source": "https://github.com/skoro/slim-swoole-integration",
+        "issues": "https://github.com/skoro/slim-swoole-integration/issues"
+    },
     "type": "library",
     "require": {
         "php": "^8.0",
