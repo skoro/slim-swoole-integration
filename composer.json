@@ -2,6 +2,7 @@
     "name": "skoro/slim-swoole-integration",
     "description": "Integration of Slim framework and Swoole - event driven asynchronous library",
     "keywords": ["slim", "framework", "swoole", "async", "event-driven"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Oleksii Skorobogatko",
