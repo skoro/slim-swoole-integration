@@ -31,5 +31,8 @@
         "psr-4": {
             "Slim\\Swoole\\": "src/"
         }
+    },
+    "scripts": {
+        "check": "phpstan"
     }
 }

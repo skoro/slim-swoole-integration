@@ -11,6 +11,7 @@ class InotifyWatcher implements FileWatcher
     /** @var resource */
     private $inotify;
 
+    /** @var array<int, string>  */
     private array $pathToWd = [];
 
     public function __construct()
@@ -20,7 +21,7 @@ class InotifyWatcher implements FileWatcher
         }
 
         $resource = inotify_init();
-        if ($resource === false) {
+        if (! is_resource($resource)) {
             throw new RuntimeException('Cannot initialize inotify extension.');
         }
 
@@ -46,9 +47,13 @@ class InotifyWatcher implements FileWatcher
      */
     private function getPathFiles(string $path): array
     {
+        if (($files = scandir($path)) === false) {
+            return [];
+        }
+
         $paths = [$path];
 
-        foreach (scandir($path) as $file) {
+        foreach ($files as $file) {
             if ($file === '.' || $file === '..') {
                 continue;
             }
