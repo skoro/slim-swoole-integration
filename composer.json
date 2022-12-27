@@ -17,15 +17,16 @@
     "type": "library",
     "require": {
         "php": "^8.0",
-        "ext-swoole": "^4.8",
         "slim/slim": "^4.9",
-        "leocavalcante/request-callback": "^0.1.1"
+        "leocavalcante/request-callback": "dev-main"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.8"
     },
     "suggest": {
-        "ext-inotify": "Needed to enable hot code reloading"
+        "ext-inotify": "Needed to enable hot code reloading",
+        "ext-swoole": "You need either ext-swoole or ext-openswoole",
+        "ext-openswoole": "You need either ext-swoole or ext-openswoole"
     },
     "autoload": {
         "psr-4": {
